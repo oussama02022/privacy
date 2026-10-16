@@ -1,444 +1,198 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Rift — سياسة الخصوصية</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — Neon Rift</title>
+<meta name="description" content="Neon Rift (package com.oussama.neonrift) is an arena action game for Android developed by Oussama Salhi (“we”). This policy explains what information the game uses and how it is handled. We do not run our own servers and we do not ask you to create an account.">
+<meta name="theme-color" content="#03040a">
+<meta name="color-scheme" content="dark">
 <style>
+:root{--bg:#03040a;--bg2:#0b1020;--card:#0e1428;--line:#1c2547;--text:#e8ecff;--muted:#9aa5d1;--cyan:#52f7ff;--violet:#9b6cff}
 *{box-sizing:border-box}
-body{
-  font-family:'Segoe UI',Tahoma,Arial,sans-serif;
-  max-width:900px;
-  margin:0 auto;
-  padding:24px 20px 60px;
-  line-height:1.9;
-  color:#1a1a1a;
-  background:#fafafa;
-}
-h1{
-  color:#0066cc;
-  border-bottom:3px solid #0066cc;
-  padding-bottom:12px;
-  font-size:28px;
-}
-h2{
-  color:#0099ff;
-  margin-top:36px;
-  padding-top:16px;
-  border-top:1px solid #e0e0e0;
-  font-size:22px;
-}
-h3{
-  color:#333;
-  margin-top:22px;
-  font-size:17px;
-}
-ul,ol{padding-inline-start:24px}
-li{margin-bottom:8px}
-a{color:#0066cc;text-decoration:none;border-bottom:1px dotted #0066cc}
-a:hover{color:#004499}
-.meta{
-  background:#eef6ff;
-  padding:14px 18px;
-  border-inline-start:4px solid #0066cc;
-  border-radius:6px;
-  margin:20px 0;
-  font-size:14px;
-}
-.meta b{color:#0066cc}
-.notice{
-  background:#fff8e1;
-  padding:12px 18px;
-  border-inline-start:4px solid #ffa000;
-  border-radius:6px;
-  margin:16px 0;
-  font-size:14px;
-}
-footer{
-  margin-top:50px;
-  padding-top:20px;
-  border-top:2px solid #0066cc;
-  text-align:center;
-  color:#666;
-  font-size:13px;
-}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#14204a 0%,var(--bg) 60%) fixed,var(--bg);color:var(--text);
+ font:16px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans Arabic","Noto Sans JP","Noto Sans SC",Arial,sans-serif;min-height:100vh}
+a{color:var(--cyan);text-underline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 56px}
+header{padding:28px 0 8px;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:15px;color:var(--cyan)}
+.logo i{width:30px;height:30px;border-radius:9px;border:2px solid var(--cyan);display:grid;place-items:center;box-shadow:0 0 18px #52f7ff55,inset 0 0 10px #52f7ff33}
+.logo i:after{content:"";width:0;height:0;border-inline-start:9px solid var(--cyan);border-block:6px solid transparent;margin-inline-start:2px}
+h1{font-size:clamp(26px,6vw,38px);line-height:1.25;margin:14px 0 6px;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.upd{color:var(--muted);font-size:14px;margin:0}
+.bar{position:sticky;top:0;z-index:5;background:#03040acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 -16px;padding:10px 16px}
+.langs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;justify-content:center;flex-wrap:wrap}
+.langs button{font:inherit;font-size:14px;line-height:1;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);color:var(--muted);cursor:pointer;min-height:38px}
+.langs button[aria-pressed=true]{color:#03040a;background:linear-gradient(90deg,var(--cyan),var(--violet));border-color:transparent;font-weight:700}
+.langs button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.tabs{display:flex;gap:8px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+.tabs a{padding:9px 16px;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--muted);font-size:15px}
+.tabs a.on{color:var(--text);border-color:var(--cyan);box-shadow:0 0 16px #52f7ff22}
+.lead{background:linear-gradient(180deg,#121a38,var(--card));border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:20px 0}
+section.s{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+section.s h2{display:flex;align-items:center;gap:10px;font-size:18px;line-height:1.4;margin:0 0 8px;color:var(--text)}
+section.s h2 .n{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-size:13px;color:#03040a;background:linear-gradient(135deg,var(--cyan),var(--violet));font-weight:800}
+section.s p{margin:8px 0;color:#cfd6f5}
+section.s ul{margin:8px 0;padding-inline-start:22px;color:#cfd6f5}
+section.s li{margin:8px 0}
+b{color:#fff}
+footer{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}
+footer .mail{display:inline-block;margin-top:6px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+.lang[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.lang:not([hidden]){animation:in .25s ease}@keyframes in{from{opacity:0;transform:translateY(6px)}}}
 </style>
+<noscript><style>.lang[hidden]{display:block!important;border-top:2px solid #1c2547;margin-top:40px}</style></noscript>
 </head>
 <body>
-
-<h1>سياسة الخصوصية — Neon Rift</h1>
-
-<div class="meta">
-  <p><b>آخر تحديث:</b> 15 يناير 2026</p>
-  <p><b>تاريخ السريان:</b> 15 يناير 2026</p>
-  <p><b>المطوّر:</b> Oussama Salhi</p>
-  <p><b>البريد الإلكتروني:</b> salhioussama601@gmail.com</p>
-  <p><b>اسم التطبيق:</b> Neon Rift</p>
-  <p><b>معرّف التطبيق:</b> com.oussama.neonrift</p>
+<div class="wrap">
+<div class="bar"><div class="langs" role="group" aria-label="Language"><button type="button" data-lang="ar" aria-pressed="false" lang="ar">العربية</button><button type="button" data-lang="en" aria-pressed="false" lang="en">English</button><button type="button" data-lang="es" aria-pressed="false" lang="es">Español</button><button type="button" data-lang="fr" aria-pressed="false" lang="fr">Français</button><button type="button" data-lang="pt" aria-pressed="false" lang="pt">Português</button><button type="button" data-lang="ru" aria-pressed="false" lang="ru">Русский</button><button type="button" data-lang="ja" aria-pressed="false" lang="ja">日本語</button><button type="button" data-lang="zh" aria-pressed="false" lang="zh">中文</button></div></div>
+<article class="lang" lang="ar" dir="rtl" data-lang="ar" data-title="سياسة الخصوصية — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>سياسة الخصوصية</h1><p class="upd">آخر تحديث: 16 أكتوبر 2026</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">سياسة الخصوصية</a><a href="delete-account.html">حذف البيانات</a></nav>
+<div class="lead">لعبة «Neon Rift» (اسم الحزمة com.oussama.neonrift) هي لعبة أكشن على أندرويد من تطوير أسامة صالحي («نحن»). توضح هذه السياسة المعلومات التي تستخدمها اللعبة وكيفية التعامل معها. نحن لا نشغّل خوادم خاصة بنا، ولا نطلب منك إنشاء حساب.</div>
+<section class="s"><h2><span class="n">1</span>المعلومات التي تستخدمها اللعبة</h2><ul><li><b>بيانات اللعب:</b> التقدّم والترقيات والإعدادات والأزياء وأعلى النتائج تُحفظ محلياً على جهازك فقط، ولا تصلنا.</li><li><b>خدمات ألعاب Google Play:</b> عند تسجيل الدخول تزوّد Google اللعبة بمعرّف اللاعب واسم العرض وصورة الملف الشخصي، لعرض ملفك وفتح الإنجازات وإرسال نتائجك إلى لوحات الصدارة. تتم معالجتها من Google وفق سياستها.</li><li><b>الإعلانات:</b> تعرض اللعبة إعلانات عبر Google AdMob، وقد يجمع AdMob معرّف الإعلانات وعنوان IP ومعلومات الجهاز والتطبيق وتفاعلك مع الإعلانات.</li><li><b>المشتريات:</b> تتم عمليات الشراء داخل التطبيق (شظايا الجواهر) عبر Google Play Billing. لا نرى بيانات بطاقتك أبداً؛ تُبلغ Google اللعبة فقط بإتمام الشراء.</li></ul></section>
+<section class="s"><h2><span class="n">2</span>ما لا نفعله</h2><p>لا نبيع بياناتك الشخصية. لا نجمع اسمك أو بريدك الإلكتروني أو رقم هاتفك أو موقعك الدقيق أو جهات اتصالك أو صورك. ولا توجد حسابات مستخدمين في اللعبة.</p></section>
+<section class="s"><h2><span class="n">3</span>خدمات الأطراف الثالثة</h2><ul><li>خدمات Google Play وألعاب Google Play وGoogle Play Billing: <a href="https://policies.google.com/privacy" rel="noopener">سياسة خصوصية Google</a></li><li>Google AdMob: <a href="https://support.google.com/admob/answer/6128543" rel="noopener">كيف تستخدم Google البيانات في الإعلانات</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>الإعلانات والموافقة</h2><p>في المناطق التي تشترط ذلك (مثل المنطقة الاقتصادية الأوروبية والمملكة المتحدة) تعرض اللعبة نموذج موافقة من Google قبل عرض الإعلانات. يمكنك أيضاً التحكم في تخصيص الإعلانات من إعدادات أندرويد ← Google ← الإعلانات، وإعادة ضبط معرّف الإعلانات أو حذفه.</p></section>
+<section class="s"><h2><span class="n">5</span>الأطفال</h2><p>اللعبة غير موجّهة للأطفال دون 13 عاماً (أو السن المطلوب في بلدك)، ولا نجمع عمداً بيانات منهم. إذا ظننت أن طفلاً زوّدنا بمعلومات فتواصل معنا لنعالج الأمر.</p></section>
+<section class="s"><h2><span class="n">6</span>الاحتفاظ بالبيانات وحذفها</h2><p>تبقى بيانات اللعب على جهازك حتى تحذف التطبيق أو تمسح بياناته. للتفاصيل راجع صفحة <a href="delete-account.html">حذف البيانات</a>.</p></section>
+<section class="s"><h2><span class="n">7</span>الأمان</h2><p>تبقى بيانات اللعب على جهازك، ونعتمد على أمان نظام أندرويد وخدمات Google. لا توجد وسيلة آمنة بنسبة 100%، لكننا نحرص على تقليل ما نعالجه.</p></section>
+<section class="s"><h2><span class="n">8</span>حقوقك</h2><p>بحسب بلدك (مثل GDPR وCCPA) قد يحق لك طلب الاطلاع على بياناتك أو حذفها أو الاعتراض على معالجتها. وبما أننا لا نخزّن بياناتك على خوادمنا، فمعظم ذلك يتم من إعدادات جهازك وحساب Google، ويسعدنا مساعدتك عند التواصل.</p></section>
+<section class="s"><h2><span class="n">9</span>التعديلات على هذه السياسة</h2><p>قد نحدّث هذه السياسة من وقت لآخر، وسيظهر تاريخ آخر تحديث في أعلى الصفحة.</p></section>
+<footer>للتواصل<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="en" dir="ltr" data-lang="en" data-title="Privacy Policy — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Privacy Policy</h1><p class="upd">Last updated: October 16, 2026</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">Privacy Policy</a><a href="delete-account.html">Data Deletion</a></nav>
+<div class="lead">Neon Rift (package com.oussama.neonrift) is an arena action game for Android developed by Oussama Salhi (“we”). This policy explains what information the game uses and how it is handled. We do not run our own servers and we do not ask you to create an account.</div>
+<section class="s"><h2><span class="n">1</span>Information the game uses</h2><ul><li><b>Gameplay data:</b> progress, upgrades, settings, skins and high scores are stored locally on your device only. We never receive them.</li><li><b>Google Play Games Services:</b> if you sign in, Google provides the game with your player ID, display name and profile image so we can show your profile, unlock achievements and submit leaderboard scores. This is processed by Google under its own policy.</li><li><b>Advertising:</b> the game shows ads through Google AdMob. AdMob may collect your advertising ID, IP address, device and app information, and ad interactions.</li><li><b>Purchases:</b> in-app purchases (gem shards) are processed by Google Play Billing. We never see your payment card details; Google only tells the game that a purchase was completed.</li></ul></section>
+<section class="s"><h2><span class="n">2</span>What we do not do</h2><p>We do not sell your personal data. We do not collect your name, email address, phone number, precise location, contacts or photos, and the game has no user accounts.</p></section>
+<section class="s"><h2><span class="n">3</span>Third-party services</h2><ul><li>Google Play Services, Google Play Games and Google Play Billing: <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a></li><li>Google AdMob: <a href="https://support.google.com/admob/answer/6128543" rel="noopener">How Google uses data in advertising</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>Ads and consent</h2><p>Where required (for example in the European Economic Area and the UK) the game shows Google’s consent form before showing ads. You can also manage ad personalization in Android Settings → Google → Ads, and reset or delete your advertising ID.</p></section>
+<section class="s"><h2><span class="n">5</span>Children</h2><p>The game is not directed to children under 13 (or the minimum age in your country) and we do not knowingly collect data from them. If you believe a child has provided us information, contact us and we will address it.</p></section>
+<section class="s"><h2><span class="n">6</span>Retention and deletion</h2><p>Gameplay data stays on your device until you uninstall the game or clear its data. See the <a href="delete-account.html">Data Deletion</a> page for details.</p></section>
+<section class="s"><h2><span class="n">7</span>Security</h2><p>Gameplay data stays on your device and relies on Android and Google security. No method is 100% secure, but we keep what we process to a minimum.</p></section>
+<section class="s"><h2><span class="n">8</span>Your rights</h2><p>Depending on your country (for example GDPR or CCPA) you may have the right to access, delete or object to the processing of your data. Because we do not store your data on our servers, most of this is done through your device and Google account settings, and we are happy to help if you contact us.</p></section>
+<section class="s"><h2><span class="n">9</span>Changes to this policy</h2><p>We may update this policy from time to time. The date at the top shows the latest update.</p></section>
+<footer>Contact<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="es" dir="ltr" data-lang="es" data-title="Política de privacidad — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Política de privacidad</h1><p class="upd">Última actualización: 16 de octubre de 2026</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">Política de privacidad</a><a href="delete-account.html">Eliminación de datos</a></nav>
+<div class="lead">Neon Rift (paquete com.oussama.neonrift) es un juego de acción para Android desarrollado por Oussama Salhi («nosotros»). Esta política explica qué información usa el juego y cómo se trata. No operamos servidores propios ni te pedimos crear una cuenta.</div>
+<section class="s"><h2><span class="n">1</span>Información que usa el juego</h2><ul><li><b>Datos de juego:</b> el progreso, las mejoras, los ajustes, los aspectos y las mejores puntuaciones se guardan solo en tu dispositivo. Nunca los recibimos.</li><li><b>Google Play Juegos:</b> si inicias sesión, Google proporciona al juego tu ID de jugador, tu nombre visible y tu imagen de perfil para mostrar tu perfil, desbloquear logros y enviar puntuaciones a las tablas de clasificación. Google los procesa según su propia política.</li><li><b>Publicidad:</b> el juego muestra anuncios mediante Google AdMob. AdMob puede recopilar tu ID de publicidad, dirección IP, información del dispositivo y de la aplicación, e interacciones con los anuncios.</li><li><b>Compras:</b> las compras dentro de la aplicación (fragmentos de gemas) se procesan con Google Play Billing. Nunca vemos los datos de tu tarjeta; Google solo informa al juego de que la compra se completó.</li></ul></section>
+<section class="s"><h2><span class="n">2</span>Lo que no hacemos</h2><p>No vendemos tus datos personales. No recopilamos tu nombre, correo electrónico, teléfono, ubicación precisa, contactos ni fotos, y el juego no tiene cuentas de usuario.</p></section>
+<section class="s"><h2><span class="n">3</span>Servicios de terceros</h2><ul><li>Google Play Services, Google Play Juegos y Google Play Billing: <a href="https://policies.google.com/privacy" rel="noopener">Política de privacidad de Google</a></li><li>Google AdMob: <a href="https://support.google.com/admob/answer/6128543" rel="noopener">Cómo usa Google los datos en la publicidad</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>Anuncios y consentimiento</h2><p>Cuando es obligatorio (por ejemplo en el Espacio Económico Europeo y el Reino Unido), el juego muestra el formulario de consentimiento de Google antes de los anuncios. También puedes gestionar la personalización de anuncios en Ajustes de Android → Google → Anuncios, y restablecer o eliminar tu ID de publicidad.</p></section>
+<section class="s"><h2><span class="n">5</span>Menores</h2><p>El juego no está dirigido a menores de 13 años (o la edad mínima de tu país) y no recopilamos datos de ellos a sabiendas. Si crees que un menor nos ha facilitado información, contáctanos y lo resolveremos.</p></section>
+<section class="s"><h2><span class="n">6</span>Conservación y eliminación</h2><p>Los datos de juego permanecen en tu dispositivo hasta que desinstales el juego o borres sus datos. Consulta la página de <a href="delete-account.html">eliminación de datos</a>.</p></section>
+<section class="s"><h2><span class="n">7</span>Seguridad</h2><p>Los datos de juego permanecen en tu dispositivo y dependen de la seguridad de Android y de Google. Ningún método es 100 % seguro, pero limitamos al mínimo lo que tratamos.</p></section>
+<section class="s"><h2><span class="n">8</span>Tus derechos</h2><p>Según tu país (por ejemplo RGPD o CCPA) puedes tener derecho a acceder a tus datos, eliminarlos u oponerte a su tratamiento. Como no almacenamos tus datos en nuestros servidores, casi todo se gestiona desde tu dispositivo y tu cuenta de Google; si nos escribes, te ayudaremos.</p></section>
+<section class="s"><h2><span class="n">9</span>Cambios en esta política</h2><p>Podemos actualizar esta política de vez en cuando. La fecha superior indica la última actualización.</p></section>
+<footer>Contacto<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="fr" dir="ltr" data-lang="fr" data-title="Politique de confidentialité — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Politique de confidentialité</h1><p class="upd">Dernière mise à jour : 16 octobre 2026</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">Politique de confidentialité</a><a href="delete-account.html">Suppression des données</a></nav>
+<div class="lead">Neon Rift (package com.oussama.neonrift) est un jeu d’action pour Android développé par Oussama Salhi (« nous »). Cette politique explique quelles informations le jeu utilise et comment elles sont traitées. Nous n’exploitons pas de serveurs propres et ne vous demandons pas de créer un compte.</div>
+<section class="s"><h2><span class="n">1</span>Informations utilisées par le jeu</h2><ul><li><b>Données de jeu :</b> la progression, les améliorations, les réglages, les apparences et les meilleurs scores sont enregistrés uniquement sur votre appareil. Nous ne les recevons jamais.</li><li><b>Jeux Google Play :</b> si vous vous connectez, Google transmet au jeu votre identifiant de joueur, votre nom affiché et votre photo de profil afin d’afficher votre profil, de débloquer des succès et d’envoyer vos scores aux classements. Google les traite selon sa propre politique.</li><li><b>Publicité :</b> le jeu affiche des annonces via Google AdMob. AdMob peut collecter votre identifiant publicitaire, votre adresse IP, des informations sur l’appareil et l’application, ainsi que vos interactions avec les annonces.</li><li><b>Achats :</b> les achats intégrés (éclats de gemmes) sont traités par Google Play Billing. Nous ne voyons jamais vos données de carte bancaire ; Google indique seulement au jeu que l’achat a abouti.</li></ul></section>
+<section class="s"><h2><span class="n">2</span>Ce que nous ne faisons pas</h2><p>Nous ne vendons pas vos données personnelles. Nous ne collectons ni votre nom, ni votre e-mail, ni votre numéro de téléphone, ni votre position précise, ni vos contacts ou photos, et le jeu n’a pas de comptes utilisateurs.</p></section>
+<section class="s"><h2><span class="n">3</span>Services tiers</h2><ul><li>Google Play Services, Jeux Google Play et Google Play Billing : <a href="https://policies.google.com/privacy" rel="noopener">Règles de confidentialité de Google</a></li><li>Google AdMob : <a href="https://support.google.com/admob/answer/6128543" rel="noopener">Comment Google utilise les données dans la publicité</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>Annonces et consentement</h2><p>Lorsque c’est obligatoire (par exemple dans l’Espace économique européen et au Royaume-Uni), le jeu affiche le formulaire de consentement de Google avant les annonces. Vous pouvez aussi gérer la personnalisation des annonces dans Paramètres Android → Google → Annonces, et réinitialiser ou supprimer votre identifiant publicitaire.</p></section>
+<section class="s"><h2><span class="n">5</span>Enfants</h2><p>Le jeu ne s’adresse pas aux enfants de moins de 13 ans (ou à l’âge minimal de votre pays) et nous ne collectons pas sciemment leurs données. Si vous pensez qu’un enfant nous a transmis des informations, contactez-nous et nous réglerons la situation.</p></section>
+<section class="s"><h2><span class="n">6</span>Conservation et suppression</h2><p>Les données de jeu restent sur votre appareil jusqu’à la désinstallation du jeu ou l’effacement de ses données. Consultez la page <a href="delete-account.html">Suppression des données</a>.</p></section>
+<section class="s"><h2><span class="n">7</span>Sécurité</h2><p>Les données de jeu restent sur votre appareil et reposent sur la sécurité d’Android et de Google. Aucune méthode n’est sûre à 100 %, mais nous limitons au minimum ce que nous traitons.</p></section>
+<section class="s"><h2><span class="n">8</span>Vos droits</h2><p>Selon votre pays (par exemple RGPD ou CCPA), vous pouvez avoir le droit d’accéder à vos données, de les supprimer ou de vous opposer à leur traitement. Comme nous ne stockons pas vos données sur nos serveurs, cela se fait surtout depuis votre appareil et votre compte Google ; nous vous aidons volontiers si vous nous écrivez.</p></section>
+<section class="s"><h2><span class="n">9</span>Modifications de cette politique</h2><p>Nous pouvons mettre à jour cette politique de temps à autre. La date en haut indique la dernière mise à jour.</p></section>
+<footer>Contact<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="pt" dir="ltr" data-lang="pt" data-title="Política de Privacidade — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Política de Privacidade</h1><p class="upd">Última atualização: 16 de outubro de 2026</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">Política de Privacidade</a><a href="delete-account.html">Exclusão de dados</a></nav>
+<div class="lead">Neon Rift (pacote com.oussama.neonrift) é um jogo de ação para Android desenvolvido por Oussama Salhi (“nós”). Esta política explica quais informações o jogo usa e como elas são tratadas. Não operamos servidores próprios e não pedimos que você crie uma conta.</div>
+<section class="s"><h2><span class="n">1</span>Informações que o jogo usa</h2><ul><li><b>Dados de jogo:</b> progresso, melhorias, configurações, skins e recordes ficam armazenados apenas no seu dispositivo. Nunca os recebemos.</li><li><b>Google Play Jogos:</b> se você fizer login, o Google fornece ao jogo seu ID de jogador, nome de exibição e foto de perfil para mostrar seu perfil, desbloquear conquistas e enviar pontuações aos placares. O Google os processa conforme a própria política.</li><li><b>Publicidade:</b> o jogo exibe anúncios pelo Google AdMob. O AdMob pode coletar seu ID de publicidade, endereço IP, informações do dispositivo e do app e interações com anúncios.</li><li><b>Compras:</b> as compras no app (fragmentos de gemas) são processadas pelo Google Play Billing. Nunca vemos os dados do seu cartão; o Google apenas informa ao jogo que a compra foi concluída.</li></ul></section>
+<section class="s"><h2><span class="n">2</span>O que não fazemos</h2><p>Não vendemos seus dados pessoais. Não coletamos seu nome, e-mail, telefone, localização precisa, contatos ou fotos, e o jogo não tem contas de usuário.</p></section>
+<section class="s"><h2><span class="n">3</span>Serviços de terceiros</h2><ul><li>Google Play Services, Google Play Jogos e Google Play Billing: <a href="https://policies.google.com/privacy" rel="noopener">Política de Privacidade do Google</a></li><li>Google AdMob: <a href="https://support.google.com/admob/answer/6128543" rel="noopener">Como o Google usa dados na publicidade</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>Anúncios e consentimento</h2><p>Onde exigido (por exemplo, no Espaço Econômico Europeu e no Reino Unido), o jogo mostra o formulário de consentimento do Google antes dos anúncios. Você também pode gerenciar a personalização de anúncios em Configurações do Android → Google → Anúncios e redefinir ou excluir seu ID de publicidade.</p></section>
+<section class="s"><h2><span class="n">5</span>Crianças</h2><p>O jogo não é direcionado a crianças menores de 13 anos (ou à idade mínima do seu país) e não coletamos dados delas intencionalmente. Se você acredita que uma criança nos forneceu informações, entre em contato e resolveremos.</p></section>
+<section class="s"><h2><span class="n">6</span>Retenção e exclusão</h2><p>Os dados de jogo permanecem no seu dispositivo até você desinstalar o jogo ou limpar seus dados. Veja a página de <a href="delete-account.html">exclusão de dados</a>.</p></section>
+<section class="s"><h2><span class="n">7</span>Segurança</h2><p>Os dados de jogo ficam no seu dispositivo e dependem da segurança do Android e do Google. Nenhum método é 100% seguro, mas limitamos ao mínimo o que tratamos.</p></section>
+<section class="s"><h2><span class="n">8</span>Seus direitos</h2><p>Dependendo do seu país (por exemplo, LGPD, GDPR ou CCPA), você pode ter direito de acessar, excluir ou se opor ao tratamento dos seus dados. Como não armazenamos seus dados em nossos servidores, quase tudo é feito pelo seu dispositivo e conta Google; ficamos felizes em ajudar se você entrar em contato.</p></section>
+<section class="s"><h2><span class="n">9</span>Alterações desta política</h2><p>Podemos atualizar esta política de tempos em tempos. A data no topo mostra a última atualização.</p></section>
+<footer>Contato<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="ru" dir="ltr" data-lang="ru" data-title="Политика конфиденциальности — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Политика конфиденциальности</h1><p class="upd">Последнее обновление: 16 октября 2026 г.</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">Политика конфиденциальности</a><a href="delete-account.html">Удаление данных</a></nav>
+<div class="lead">Neon Rift (пакет com.oussama.neonrift) — экшен-игра для Android, разработанная Усамой Салхи («мы»). В этой политике описано, какую информацию использует игра и как с ней обращаются. У нас нет собственных серверов, и мы не просим вас создавать учётную запись.</div>
+<section class="s"><h2><span class="n">1</span>Какую информацию использует игра</h2><ul><li><b>Игровые данные:</b> прогресс, улучшения, настройки, скины и рекорды хранятся только на вашем устройстве. Мы их не получаем.</li><li><b>Google Play Игры:</b> при входе Google передаёт игре ваш ID игрока, отображаемое имя и фото профиля, чтобы показывать профиль, открывать достижения и отправлять результаты в таблицы лидеров. Google обрабатывает их по собственной политике.</li><li><b>Реклама:</b> игра показывает рекламу через Google AdMob. AdMob может собирать рекламный идентификатор, IP-адрес, сведения об устройстве и приложении, а также взаимодействия с рекламой.</li><li><b>Покупки:</b> встроенные покупки (осколки самоцветов) обрабатываются через Google Play Billing. Мы никогда не видим данные вашей карты; Google лишь сообщает игре, что покупка завершена.</li></ul></section>
+<section class="s"><h2><span class="n">2</span>Чего мы не делаем</h2><p>Мы не продаём ваши персональные данные. Мы не собираем имя, адрес электронной почты, номер телефона, точное местоположение, контакты и фотографии, а в игре нет учётных записей.</p></section>
+<section class="s"><h2><span class="n">3</span>Сервисы третьих сторон</h2><ul><li>Google Play Services, Google Play Игры и Google Play Billing: <a href="https://policies.google.com/privacy" rel="noopener">Политика конфиденциальности Google</a></li><li>Google AdMob: <a href="https://support.google.com/admob/answer/6128543" rel="noopener">Как Google использует данные в рекламе</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>Реклама и согласие</h2><p>Там, где это требуется (например, в Европейской экономической зоне и Великобритании), игра показывает форму согласия Google перед рекламой. Персонализацией рекламы можно управлять в настройках Android → Google → Реклама, а рекламный идентификатор можно сбросить или удалить.</p></section>
+<section class="s"><h2><span class="n">5</span>Дети</h2><p>Игра не предназначена для детей младше 13 лет (или минимального возраста в вашей стране), и мы сознательно не собираем их данные. Если вы считаете, что ребёнок передал нам информацию, свяжитесь с нами — мы всё исправим.</p></section>
+<section class="s"><h2><span class="n">6</span>Хранение и удаление</h2><p>Игровые данные остаются на вашем устройстве, пока вы не удалите игру или не очистите её данные. Подробности — на странице <a href="delete-account.html">«Удаление данных»</a>.</p></section>
+<section class="s"><h2><span class="n">7</span>Безопасность</h2><p>Игровые данные остаются на вашем устройстве и защищены средствами Android и Google. Ни один способ не обеспечивает 100 % безопасности, но мы сводим обработку данных к минимуму.</p></section>
+<section class="s"><h2><span class="n">8</span>Ваши права</h2><p>В зависимости от вашей страны (например, GDPR или CCPA) вы можете иметь право на доступ к данным, их удаление или возражение против обработки. Поскольку мы не храним ваши данные на своих серверах, большая часть этого делается через настройки устройства и аккаунта Google; мы рады помочь, если вы свяжетесь с нами.</p></section>
+<section class="s"><h2><span class="n">9</span>Изменения политики</h2><p>Мы можем время от времени обновлять эту политику. Дата вверху страницы показывает последнее обновление.</p></section>
+<footer>Связь<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="ja" dir="ltr" data-lang="ja" data-title="プライバシーポリシー — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>プライバシーポリシー</h1><p class="upd">最終更新日：2026年10月16日</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">プライバシーポリシー</a><a href="delete-account.html">データの削除</a></nav>
+<div class="lead">Neon Rift（パッケージ名 com.oussama.neonrift）は、Oussama Salhi（以下「当方」）が開発したAndroid向けアクションゲームです。本ポリシーでは、ゲームが使用する情報とその取り扱いについて説明します。当方は独自のサーバーを運営しておらず、アカウントの作成も求めません。</div>
+<section class="s"><h2><span class="n">1</span>ゲームが使用する情報</h2><ul><li><b>ゲームデータ：</b>進行状況、強化、設定、スキン、ハイスコアは、お使いの端末内にのみ保存されます。当方がこれらを受け取ることはありません。</li><li><b>Google Play ゲーム：</b>ログインすると、Googleがプレイヤー ID、表示名、プロフィール画像をゲームに提供します。プロフィールの表示、実績の解除、リーダーボードへのスコア送信に使用します。これらはGoogleのポリシーに従って処理されます。</li><li><b>広告：</b>ゲームはGoogle AdMobを通じて広告を表示します。AdMobは、広告ID、IPアドレス、端末およびアプリの情報、広告との操作を収集する場合があります。</li><li><b>購入：</b>アプリ内購入（ジェムシャード）はGoogle Play 請求で処理されます。カード情報を当方が見ることはなく、Googleから購入が完了したことのみがゲームに通知されます。</li></ul></section>
+<section class="s"><h2><span class="n">2</span>当方が行わないこと</h2><p>個人データを販売することはありません。氏名、メールアドレス、電話番号、正確な位置情報、連絡先、写真は収集せず、ゲームにユーザーアカウントはありません。</p></section>
+<section class="s"><h2><span class="n">3</span>第三者サービス</h2><ul><li>Google Play 開発者サービス、Google Play ゲーム、Google Play 請求：<a href="https://policies.google.com/privacy" rel="noopener">Google プライバシーポリシー</a></li><li>Google AdMob：<a href="https://support.google.com/admob/answer/6128543" rel="noopener">広告におけるGoogleのデータ利用</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>広告と同意</h2><p>必要な地域（欧州経済領域や英国など）では、広告を表示する前にGoogleの同意フォームを表示します。Androidの設定 → Google → 広告 から広告のパーソナライズを管理し、広告IDをリセットまたは削除することもできます。</p></section>
+<section class="s"><h2><span class="n">5</span>お子様について</h2><p>本ゲームは13歳未満（またはお住まいの国の最低年齢未満）のお子様を対象としておらず、意図的にデータを収集することはありません。お子様が情報を提供したと思われる場合はご連絡ください。</p></section>
+<section class="s"><h2><span class="n">6</span>保存期間と削除</h2><p>ゲームデータは、ゲームをアンインストールするかデータを消去するまで端末に残ります。詳しくは<a href="delete-account.html">データの削除</a>のページをご覧ください。</p></section>
+<section class="s"><h2><span class="n">7</span>セキュリティ</h2><p>ゲームデータは端末内に保存され、AndroidとGoogleのセキュリティに依存します。100%安全な方法はありませんが、取り扱う情報を最小限にとどめています。</p></section>
+<section class="s"><h2><span class="n">8</span>お客様の権利</h2><p>お住まいの国（GDPR、CCPAなど）によっては、データへのアクセス、削除、処理への異議を求める権利があります。当方はサーバーにデータを保存していないため、多くは端末とGoogleアカウントの設定で対応できます。ご連絡いただければサポートします。</p></section>
+<section class="s"><h2><span class="n">9</span>本ポリシーの変更</h2><p>本ポリシーは随時更新されることがあります。最新の更新日はページ上部に表示されます。</p></section>
+<footer>お問い合わせ<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="zh" dir="ltr" data-lang="zh" data-title="隐私政策 — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>隐私政策</h1><p class="upd">最后更新：2026年10月16日</p></header>
+<nav class="tabs"><a class="on" href="index.html" aria-current="page">隐私政策</a><a href="delete-account.html">数据删除</a></nav>
+<div class="lead">Neon Rift（包名 com.oussama.neonrift）是由 Oussama Salhi（“我们”）开发的 Android 动作游戏。本政策说明游戏使用哪些信息以及如何处理这些信息。我们不运营自己的服务器，也不要求您创建账号。</div>
+<section class="s"><h2><span class="n">1</span>游戏使用的信息</h2><ul><li><b>游戏数据：</b>进度、升级、设置、皮肤和最高分仅保存在您的设备上，我们不会收到。</li><li><b>Google Play 游戏：</b>如果您登录，Google 会向游戏提供您的玩家 ID、显示名称和头像，用于显示个人资料、解锁成就和提交排行榜成绩。这些信息由 Google 按其自身政策处理。</li><li><b>广告：</b>游戏通过 Google AdMob 展示广告。AdMob 可能收集您的广告 ID、IP 地址、设备和应用信息以及广告互动情况。</li><li><b>购买：</b>应用内购买（宝石碎片）由 Google Play 结算服务处理。我们不会看到您的银行卡信息；Google 只会告知游戏购买已完成。</li></ul></section>
+<section class="s"><h2><span class="n">2</span>我们不会做的事</h2><p>我们不会出售您的个人数据。我们不收集您的姓名、电子邮件、电话号码、精确位置、通讯录或照片，游戏中也没有用户账号。</p></section>
+<section class="s"><h2><span class="n">3</span>第三方服务</h2><ul><li>Google Play 服务、Google Play 游戏和 Google Play 结算服务：<a href="https://policies.google.com/privacy" rel="noopener">Google 隐私权政策</a></li><li>Google AdMob：<a href="https://support.google.com/admob/answer/6128543" rel="noopener">Google 如何在广告中使用数据</a></li></ul></section>
+<section class="s"><h2><span class="n">4</span>广告与同意</h2><p>在有要求的地区（例如欧洲经济区和英国），游戏会在展示广告前显示 Google 的同意表单。您也可以在 Android 设置 → Google → 广告 中管理广告个性化，并重置或删除广告 ID。</p></section>
+<section class="s"><h2><span class="n">5</span>儿童</h2><p>本游戏并非面向 13 岁以下儿童（或您所在国家/地区的最低年龄），我们不会有意收集他们的数据。如果您认为有儿童向我们提供了信息，请联系我们，我们会处理。</p></section>
+<section class="s"><h2><span class="n">6</span>保存与删除</h2><p>游戏数据会保留在您的设备上，直到您卸载游戏或清除其数据。详情请参阅<a href="delete-account.html">数据删除</a>页面。</p></section>
+<section class="s"><h2><span class="n">7</span>安全</h2><p>游戏数据保存在您的设备上，依靠 Android 和 Google 的安全机制。没有任何方法是 100% 安全的，但我们将处理的信息控制在最低限度。</p></section>
+<section class="s"><h2><span class="n">8</span>您的权利</h2><p>根据您所在的国家/地区（例如 GDPR 或 CCPA），您可能有权访问、删除您的数据或反对其处理。由于我们不在服务器上存储您的数据，大部分操作可通过您的设备和 Google 账号设置完成；联系我们，我们乐意协助。</p></section>
+<section class="s"><h2><span class="n">9</span>本政策的变更</h2><p>我们可能会不时更新本政策。页面顶部的日期显示最近一次更新时间。</p></section>
+<footer>联系我们<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
 </div>
-
-<h2>1. مقدمة</h2>
-<p>
-  مرحباً بك في <b>NEON RIFT</b> ("اللعبة"، "نحن"، "خاصتنا"). نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح سياسة الخصوصية هذه ("السياسة") كيفية جمعنا واستخدامنا وتخزيننا ومشاركتنا وحمايتنا لمعلوماتك عند تنزيلك للعبة أو استخدامك لها أو التفاعل معها.
-</p>
-<p>
-  <b>يرجى قراءة هذه السياسة بعناية قبل استخدام اللعبة.</b> باستخدامك للعبة، فإنك تُقرّ بأنك قرأت هذه السياسة وفهمتها ووافقت على الممارسات الموضحة فيها. إذا كنت لا توافق على أي جزء من هذه السياسة، يُرجى التوقف عن استخدام اللعبة فوراً.
-</p>
-<p>
-  تنطبق هذه السياسة على جميع المستخدمين بغض النظر عن موقعهم الجغرافي، وتتوافق مع القوانين الدولية الرئيسية بما فيها:
-</p>
-<ul>
-  <li>اللائحة العامة لحماية البيانات (GDPR) — الاتحاد الأوروبي</li>
-  <li>قانون خصوصية المستهلك في كاليفورنيا (CCPA) — الولايات المتحدة</li>
-  <li>قانون حماية البيانات الشخصية (PDPA) — سنغافورة</li>
-  <li>قانون حماية المعلومات الشخصية (PIPL) — الصين</li>
-  <li>قانون حماية البيانات (DPA) — المملكة المتحدة</li>
-</ul>
-
-<h2>2. المعلومات التي نجمعها</h2>
-
-<h3>2.1 معلومات تقدّمها طوعاً</h3>
-<p>عند إنشاء حساب داخل اللعبة (اختياري — يمكنك اللعب كزائر):</p>
-<ul>
-  <li><b>البريد الإلكتروني:</b> لإنشاء الحساب والمصادقة</li>
-  <li><b>اسم المستخدم:</b> لعرضه في اللعبة (3-20 حرفاً)</li>
-  <li><b>كلمة المرور:</b> مُخزّنة كـ hash بواسطة bcrypt — لا يمكن استرجاعها نصياً</li>
-  <li><b>الأفاتار:</b> الرمز التعبيري الذي تختاره (من قائمة ثابتة)</li>
-  <li><b>اللغة المفضّلة:</b> لتخصيص تجربتك</li>
-</ul>
-<p>
-  <b>ملاحظة:</b> تقديم هذه المعلومات اختياري. يمكنك اللعب كزائر مع حفظ محلي فقط، لكنك لن تتمكن من استعادة تقدمك على جهاز آخر.
-</p>
-
-<h3>2.2 معلومات اللعبة والتقدّم</h3>
-<p>نحفظ تلقائياً:</p>
-<ul>
-  <li><b>معرّف اللاعب الفريد (UID):</b> يُنشأ بواسطة Firebase Authentication</li>
-  <li><b>التقدّم:</b> المستوى، الشظايا، الموجات، القصة</li>
-  <li><b>الإنجازات:</b> المفتوحة والمستلمة</li>
-  <li><b>القطع الأثرية والرفقاء:</b> المملوكة والمطوّرة</li>
-  <li><b>الأشكال (Skins):</b> المملوكة والمختارة</li>
-  <li><b>الإحصائيات:</b> عدد القتلات، الوقت المُستخدم، أفضل موجة</li>
-  <li><b>سجل الشراء:</b> المشتريات داخل التطبيق</li>
-</ul>
-
-<h3>2.3 معلومات تُجمع تلقائياً</h3>
-<p>عند استخدامك للعبة، قد تُجمع المعلومات التالية تلقائياً:</p>
-
-<h4>أ) معلومات الجهاز</h4>
-<ul>
-  <li>نوع الجهاز والطراز (Android)</li>
-  <li>إصدار نظام التشغيل</li>
-  <li>اللغة والإعدادات الإقليمية</li>
-  <li>المنطقة الزمنية</li>
-  <li>مستوى البطارية (لتحسين الأداء)</li>
-  <li>ذاكرة الوصول العشوائي (RAM) والمعالج</li>
-</ul>
-
-<h4>ب) معرفات الجهاز</h4>
-<ul>
-  <li><b>معرّف الإعلان (Advertising ID / AD_ID):</b> لعرض إعلانات AdMob</li>
-  <li><b>عنوان IP:</b> لتحديد الموقع التقريبي (على مستوى المدينة)</li>
-  <li><b>معرّف التثبيت:</b> للتحليلات</li>
-</ul>
-
-<h4>ج) بيانات الاستخدام</h4>
-<ul>
-  <li>الوقت الذي تقضيه في اللعبة</li>
-  <li>المراحل والموجات التي وصلت إليها</li>
-  <li>الأخطاء والانخفاضات (Crashes)</li>
-  <li>التفاعل مع الإعلانات</li>
-  <li>المشتريات (بدون تفاصيل الدفع)</li>
-</ul>
-
-<h4>د) البيانات المحلية (على جهازك فقط)</h4>
-<ul>
-  <li>إعدادات الصوت والموسيقى</li>
-  <li>وضع التحكم (عصا / لمس مباشر)</li>
-  <li>وضع الإطلاق (تلقائي / يدوي / هجين)</li>
-  <li>الاهتزاز، الإيقاف التلقائي</li>
-  <li>التقدّم غير المُزامن</li>
-</ul>
-
-<h2>3. كيف نستخدم معلوماتك</h2>
-<p>نستخدم بياناتك للأغراض التالية، وكل استخدام له أساس قانوني واضح:</p>
-
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px">
-  <tr style="background:#eef6ff">
-    <th style="border:1px solid #ccc;padding:10px;text-align:right">الغرض</th>
-    <th style="border:1px solid #ccc;padding:10px;text-align:right">الأساس القانوني</th>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">إنشاء الحساب وتسجيل الدخول</td>
-    <td style="border:1px solid #ccc;padding:10px">تنفيذ العقد</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">حفظ التقدّم ومزامنته</td>
-    <td style="border:1px solid #ccc;padding:10px">تنفيذ العقد</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">عرض الإعلانات</td>
-    <td style="border:1px solid #ccc;padding:10px">الموافقة / المصلحة المشروعة</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">تحسين اللعبة وإصلاح الأخطاء</td>
-    <td style="border:1px solid #ccc;padding:10px">المصلحة المشروعة</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">معالجة المشتريات</td>
-    <td style="border:1px solid #ccc;padding:10px">تنفيذ العقد</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">منع الاحتيال والغش</td>
-    <td style="border:1px solid #ccc;padding:10px">المصلحة المشروعة</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">الامتثال للقوانين</td>
-    <td style="border:1px solid #ccc;padding:10px">الالتزام القانوني</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">الدعم الفني</td>
-    <td style="border:1px solid #ccc;padding:10px">تنفيذ العقد</td>
-  </tr>
-</table>
-
-<h2>4. مشاركة البيانات مع أطراف ثالثة</h2>
-<p>
-  <b>نحن لا نبيع بياناتك الشخصية أبداً.</b> نشاركها فقط مع مزوّدي الخدمة الموثوقين التاليين، وكلهم ملتزمون بحماية بياناتك:
-</p>
-
-<h3>4.1 Google Firebase</h3>
-<p><b>الغرض:</b> تخزين البيانات، المصادقة، المزامنة السحابية</p>
-<p><b>البيانات المشتركة:</b> البريد، اسم المستخدم، التقدّم، الإحصائيات</p>
-<p><b>الموقع:</b> خوادم في الولايات المتحدة وأوروبا</p>
-<p><b>السياسة:</b> <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a></p>
-
-<h3>4.2 Google AdMob</h3>
-<p><b>الغرض:</b> عرض الإعلانات المكافئة والبانر</p>
-<p><b>البيانات المشتركة:</b> معرّف الإعلان، IP، نوع الجهاز، تفاعل الإعلانات</p>
-<p><b>الموقع:</b> حول العالم</p>
-<p><b>السياسة:</b> <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></p>
-<p><b>ملاحظة:</b> يمكنك إيقاف الإعلانات المخصّصة عبر إعدادات جهازك:
-  <br>الإعدادات &gt; Google &gt; الإعلانات &gt; إلغاء تخصيص الإعلانات.</p>
-
-<h3>4.3 Google Play Billing</h3>
-<p><b>الغرض:</b> معالجة المشتريات داخل التطبيق</p>
-<p><b>البيانات المشتركة:</b> رمز الشراء، المنتج، المبلغ (لا نحتفظ ببطاقتك)</p>
-<p><b>السياسة:</b> <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
-
-<h3>4.4 Google Play Services</h3>
-<p><b>الغرض:</b> تشغيل اللعبة على Android، التحديثات، الأمان</p>
-<p><b>السياسة:</b> <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
-
-<h3>4.5 السلطات القانونية</h3>
-<p>
-  قد نكشف عن بياناتك إذا طُلب منا قانونياً (أمر قضائي، استدعاء، أو إجراء قانوني)، أو إذا رأينا بحسن نية أن الكشف ضروري لحماية حقوقنا أو سلامة المستخدمين أو مكافحة الاحتيال.
-</p>
-
-<div class="notice">
-  <b>⚠️ نقل البيانات دولياً:</b><br>
-  خوادم Firebase موجودة في الولايات المتحدة. باستخدامك اللعبة من خارج الولايات المتحدة، فإنك توافق على نقل بياناتك وتخزينها ومعالجتها في الولايات المتحدة أو أي بلد آخر يعمل فيه مزودو خدمتنا. نتخذ إجراءات تعاقدية وقانونية لضمان حماية بياناتك وفق أعلى المعايير.
-</div>
-
-<h2>5. أمان البيانات</h2>
-<p>نتخذ إجراءات تقنية وتنظيمية لحماية بياناتك:</p>
-<ul>
-  <li><b>التشفير أثناء النقل:</b> جميع الاتصالات تتم عبر HTTPS/TLS 1.2+</li>
-  <li><b>تجزئة كلمات المرور:</b> bcrypt مع salt — لا يمكن استرجاعها حتى من قِبلنا</li>
-  <li><b>Firebase Security Rules:</b> الوصول للبيانات مقيّد بالمصادقة</li>
-  <li><b>مراجعة أمنية دورية:</b> نحدّث المكتبات والحزم باستمرار</li>
-  <li><b>مبدأ الحد الأدنى:</b> لا نجمع بيانات لا نحتاجها</li>
-  <li><b>الوصول المحدود:</b> لا أحد غير المطوّر يستطيع الوصول للإنتاج</li>
-</ul>
-<p>
-  <b>تنبيه:</b> رغم حرصنا، لا يوجد نظام آمن 100%. لا يمكننا ضمان الأمان المطلق لأي معلومات. في حال اكتشفنا خرقاً للبيانات يؤثر عليك، سنُخطرك خلال 72 ساعة وفقاً للقوانين المعمول بها.
-</p>
-
-<h2>6. الاحتفاظ بالبيانات</h2>
-<p>نحتفظ ببياناتك للمدة اللازمة لتحقيق الأغراض المذكورة:</p>
-
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px">
-  <tr style="background:#eef6ff">
-    <th style="border:1px solid #ccc;padding:10px;text-align:right">نوع البيانات</th>
-    <th style="border:1px solid #ccc;padding:10px;text-align:right">مدة الاحتفاظ</th>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">الحساب (البريد، اسم المستخدم)</td>
-    <td style="border:1px solid #ccc;padding:10px">حتى حذف الحساب</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">تقدّم اللعبة (سحابي)</td>
-    <td style="border:1px solid #ccc;padding:10px">حتى حذف الحساب</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">البيانات المحلية</td>
-    <td style="border:1px solid #ccc;padding:10px">حتى حذف اللعبة أو مسح بياناتها</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">بيانات الإعلانات (AdMob)</td>
-    <td style="border:1px solid #ccc;padding:10px">تُدار من Google</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">سجلات الأعطال</td>
-    <td style="border:1px solid #ccc;padding:10px">90 يوماً</td>
-  </tr>
-  <tr>
-    <td style="border:1px solid #ccc;padding:10px">سجل الشراء</td>
-    <td style="border:1px solid #ccc;padding:10px">حتى حذف الحساب (تحتفظ Google بسجلها)</td>
-  </tr>
-</table>
-
-<p>بعد انتهاء المدة، نحذف بياناتك أو نجعلها مجهولة الهوية (anonymized) بشكل آمن.</p>
-
-<h2>7. حقوقك</h2>
-<p>لديك الحقوق التالية بحسب القوانين المعمول بها:</p>
-<ul>
-  <li><b>الوصول:</b> طلب نسخة من بياناتك الشخصية</li>
-  <li><b>التصحيح:</b> تصحيح أي بيانات غير دقيقة</li>
-  <li><b>الحذف:</b> حذف حسابك وبياناتك بالكامل ("الحق في النسيان")</li>
-  <li><b>تقييد المعالجة:</b> الحد من كيفية استخدامنا لبياناتك</li>
-  <li><b>نقل البيانات:</b> الحصول على بياناتك بصيغة قابلة للقراءة آلياً</li>
-  <li><b>الاعتراض:</b> الاعتراض على معالجة معيّنة</li>
-  <li><b>سحب الموافقة:</b> في أي وقت، دون تأثير على المشروعية السابقة</li>
-  <li><b>عدم التمييز:</b> لن نُميّز ضدك لممارسة حقوقك</li>
-</ul>
-
-<h3>كيف تمارس حقوقك؟</h3>
-<ol>
-  <li><b>من داخل اللعبة:</b> القائمة &gt; الحساب &gt; حذف الحساب</li>
-  <li><b>عبر البريد:</b> salhioussama601@gmail.com (سنرد خلال 30 يوماً)</li>
-</ol>
-<p>
-  إذا كنت في الاتحاد الأوروبي وترى أن حقوقك انتُهكت، يحق لك تقديم شكوى إلى سلطة حماية البيانات المحلية في بلدك.
-</p>
-
-<h2>8. خصوصية الأطفال</h2>
-<p>
-  اللعبة مخصّصة للمستخدمين من عمر <b>13 سنة وأكبر</b>. لا نجمع بيانات شخصية من الأطفال دون 13 عاماً عن قصد، التزاماً بقانون COPPA (الولايات المتحدة) وGDPR (الاتحاد الأوروبي).
-</p>
-<p>
-  إذا كنت والداً أو وصياً واكتشفت أن طفلك دون 13 عاماً قد أنشأ حساباً، يرجى التواصل معنا فوراً على salhioussama601@gmail.com وسنحذف الحساب والبيانات خلال 7 أيام.
-</p>
-<p>
-  المستخدمون بين 13 و16 سنة في الاتحاد الأوروبي يحتاجون موافقة الوالدين وفق GDPR.
-</p>
-
-<h2>9. الإعلانات والموافقة</h2>
-<p>
-  نعرض الإعلانات عبر Google AdMob. وفقاً لـ GDPR، نوفر للمستخدمين في الاتحاد الأوروبي خيار الموافقة على الإعلانات المخصّصة أو رفضها.
-</p>
-<p>
-  يمكنك ضبط تفضيلات الإعلانات من:
-</p>
-<ul>
-  <li>إعدادات جهاز Android &gt; Google &gt; الإعلانات</li>
-  <li>زيارة <a href="https://adssettings.google.com">adssettings.google.com</a></li>
-</ul>
-
-<h2>10. ملفات تعريف الارتباط (Cookies) والتقنيات المشابهة</h2>
-<p>
-  اللعبة على Android لا تستخدم ملفات تعريف الارتباط التقليدية، لكنها قد تستخدم:
-</p>
-<ul>
-  <li><b>LocalStorage / IndexedDB:</b> لحفظ الإعدادات والتقدّم المحلي</li>
-  <li><b>Android SharedPreferences:</b> لحفظ التفضيلات</li>
-  <li><b>معرّفات AdMob:</b> لعرض الإعلانات</li>
-  <li><b>معرّفات Firebase:</b> للمصادقة والمزامنة</li>
-</ul>
-
-<h2>11. الأساس القانوني للمعالجة (GDPR)</h2>
-<p>نعالج بياناتك بناءً على:</p>
-<ul>
-  <li><b>تنفيذ العقد:</b> لتقديم الخدمة التي طلبتها (اللعب، الحساب، المزامنة)</li>
-  <li><b>الموافقة:</b> للإعلانات المخصّصة والتحليلات (يمكنك سحبها)</li>
-  <li><b>المصلحة المشروعة:</b> للأمان، منع الاحتيال، تحسين الخدمة</li>
-  <li><b>الالتزام القانوني:</b> للامتثال للقوانين المعمول بها</li>
-</ul>
-
-<h2>12. حقوقك في كاليفورنيا (CCPA/CPRA)</h2>
-<p>إذا كنت مقيماً في كاليفورنيا، يحق لك:</p>
-<ul>
-  <li>معرفة الفئات والتفاصيل المحددة للبيانات التي نجمعها</li>
-  <li>معرفة الفئات التي نشاركها والفئات التي نبيعها (نحن لا نبيع)</li>
-  <li>حذف بياناتك الشخصية</li>
-  <li>تصحيح أي بيانات غير دقيقة</li>
-  <li>عدم التمييز لممارسة حقوقك</li>
-</ul>
-<p>لممارسة حقوقك، تواصل معنا على salhioussama601@gmail.com.</p>
-
-<h2>13. خصوصية المستخدمين العرب والدوليين</h2>
-<p>
-  نلتزم بقوانين حماية البيانات في مختلف الدول. إذا كنت في:
-</p>
-<ul>
-  <li><b>الجزائر:</b> نلتزم بالقانون 18-07 لحماية الأشخاص الطبيعيين</li>
-  <li><b>السعودية:</b> نلتزم بنظام حماية البيانات الشخصية (PDPL)</li>
-  <li><b>الإمارات:</b> نلتزم بقانون حماية البيانات الشخصية</li>
-  <li><b>مصر:</b> نلتزم بقانون حماية البيانات الشخصية 151/2020</li>
-</ul>
-
-<h2>14. التغييرات على هذه السياسة</h2>
-<p>
-  قد نحدّث هذه السياسة من وقت لآخر لتعكس التغييرات في خدماتنا أو القوانين. سننشر التحديثات على هذه الصفحة مع تاريخ "آخر تحديث".
-</p>
-<p>
-  <b>التغييرات الجوهرية:</b> سنُخطرك عبر:
-</p>
-<ul>
-  <li>إشعار داخل اللعبة</li>
-  <li>رسالة بريد إلكتروني (إذا كان لديك حساب)</li>
-</ul>
-<p>
-  استمرارك في استخدام اللعبة بعد التغييرات يعني موافقتك على السياسة المحدّثة. إذا لم توافق، يجب عليك التوقف عن استخدام اللعبة وحذف حسابك.
-</p>
-
-<h2>15. حذف الحساب والبيانات</h2>
-<p>يمكنك حذف حسابك وبياناتك بالكامل عبر:</p>
-<ol>
-  <li><b>من داخل اللعبة:</b> القائمة الرئيسية &gt; الحساب &gt; حذف الحساب</li>
-  <li><b>عبر البريد:</b> أرسل رسالة إلى salhioussama601@gmail.com مع:
-    <ul>
-      <li>عنوان: "طلب حذف حساب Neon Rift"</li>
-      <li>البريد الإلكتروني المُسجّل</li>
-    </ul>
-  </li>
-</ol>
-<p>
-  <b>ما سيُحذف:</b> البريد، اسم المستخدم، الأفاتار، تقدّم اللعبة، الإحصائيات، الإنجازات، الشظايا، القطع الأثرية.
-</p>
-<p>
-  <b>المدة:</b> خلال 30 يوماً من الطلب، مع إشعار تأكيدي.
-</p>
-<p>
-  <b>ملاحظة:</b> بعض البيانات قد تبقى في النسخ الاحتياطية لفترة قصيرة (حتى 60 يوماً) ثم تُحذف نهائياً. سجل المشتريات تحتفظ به Google وفق سياساتها الخاصة.
-</p>
-
-<h2>16. المطوّر والتحكّم بالبيانات</h2>
-<p>
-  نحن <b>مراقب البيانات (Data Controller)</b> لبياناتك الشخصية. لأي استفسار أو طلب متعلق بالخصوصية:
-</p>
-<ul>
-  <li><b>المطوّر:</b> Oussama Salhi</li>
-  <li><b>البريد:</b> salhioussama601@gmail.com</li>
-  <li><b>وقت الرد:</b> خلال 30 يوماً كحد أقصى</li>
-</ul>
-
-<h2>17. الموافقة</h2>
-<p>
-  باستخدامك لعبة Neon Rift، فإنك تُقرّ بأنك:
-</p>
-<ul>
-  <li>قرأت وفهمت هذه السياسة بالكامل</li>
-  <li>توافق على جمع واستخدام بياناتك كما هو موضح</li>
-  <li>عمرك 13 سنة على الأقل</li>
-  <li>لديك الأهلية القانونية للقبول بهذه الشروط</li>
-</ul>
-
-<footer>
-  <p><b>NEON RIFT</b> — Arena Roguelite</p>
-  <p>© 2026 Oussama Salhi. جميع الحقوق محفوظة.</p>
-  <p>آخر تحديث: 15 يناير 2026</p>
-</footer>
-
+<script>
+(function(){
+  var codes=["ar", "en", "es", "fr", "pt", "ru", "ja", "zh"];
+  function pick(){
+    var q=new URLSearchParams(location.search).get('lang');
+    if(q&&codes.indexOf(q)>-1)return q;
+    try{var s=localStorage.getItem('nr_lang');if(s&&codes.indexOf(s)>-1)return s;}catch(e){}
+    var n=(navigator.languages||[navigator.language||'en']);
+    for(var i=0;i<n.length;i++){var c=String(n[i]).toLowerCase().slice(0,2);if(codes.indexOf(c)>-1)return c;}
+    return 'en';
+  }
+  function show(c,save){
+    document.querySelectorAll('.lang').forEach(function(a){a.hidden=a.dataset.lang!==c;});
+    var a=document.querySelector('.lang[data-lang="'+c+'"]');
+    document.documentElement.lang=c;document.documentElement.dir=a.getAttribute('dir');
+    document.title=a.dataset.title;
+    document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===c);});
+    if(save){try{localStorage.setItem('nr_lang',c);}catch(e){}}
+    document.querySelectorAll('.tabs a, .lang a[href$=".html"]').forEach(function(l){
+      var u=l.getAttribute('href').split('?')[0];l.setAttribute('href',u+'?lang='+c);});
+  }
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click',function(){show(b.dataset.lang,true);window.scrollTo({top:0});});});
+  show(pick(),false);
+})();
+</script>
 </body>
 </html>
