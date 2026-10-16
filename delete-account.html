@@ -1,60 +1,166 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>حذف الحساب — Neon Rift</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Data Deletion — Neon Rift</title>
+<meta name="description" content="Neon Rift does not require an account and we do not store your personal data on our servers. Here is how to delete everything related to the game.">
+<meta name="theme-color" content="#03040a">
+<meta name="color-scheme" content="dark">
 <style>
-body{font-family:Arial,sans-serif;max-width:700px;margin:40px auto;padding:20px;line-height:1.9;color:#222}
-h1{color:#0066cc}h2{color:#0099ff;margin-top:28px}
-a{color:#0066cc}
-.box{background:#eef6ff;padding:14px 18px;border-right:4px solid #0066cc;border-radius:6px;margin:16px 0}
+:root{--bg:#03040a;--bg2:#0b1020;--card:#0e1428;--line:#1c2547;--text:#e8ecff;--muted:#9aa5d1;--cyan:#52f7ff;--violet:#9b6cff}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:radial-gradient(1200px 600px at 50% -200px,#14204a 0%,var(--bg) 60%) fixed,var(--bg);color:var(--text);
+ font:16px/1.75 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans Arabic","Noto Sans JP","Noto Sans SC",Arial,sans-serif;min-height:100vh}
+a{color:var(--cyan);text-underline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 56px}
+header{padding:28px 0 8px;text-align:center}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:15px;color:var(--cyan)}
+.logo i{width:30px;height:30px;border-radius:9px;border:2px solid var(--cyan);display:grid;place-items:center;box-shadow:0 0 18px #52f7ff55,inset 0 0 10px #52f7ff33}
+.logo i:after{content:"";width:0;height:0;border-inline-start:9px solid var(--cyan);border-block:6px solid transparent;margin-inline-start:2px}
+h1{font-size:clamp(26px,6vw,38px);line-height:1.25;margin:14px 0 6px;background:linear-gradient(90deg,var(--cyan),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.upd{color:var(--muted);font-size:14px;margin:0}
+.bar{position:sticky;top:0;z-index:5;background:#03040acc;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin:0 -16px;padding:10px 16px}
+.langs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;justify-content:center;flex-wrap:wrap}
+.langs button{font:inherit;font-size:14px;line-height:1;padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--bg2);color:var(--muted);cursor:pointer;min-height:38px}
+.langs button[aria-pressed=true]{color:#03040a;background:linear-gradient(90deg,var(--cyan),var(--violet));border-color:transparent;font-weight:700}
+.langs button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.tabs{display:flex;gap:8px;justify-content:center;margin:18px 0 4px;flex-wrap:wrap}
+.tabs a{padding:9px 16px;border-radius:12px;border:1px solid var(--line);text-decoration:none;color:var(--muted);font-size:15px}
+.tabs a.on{color:var(--text);border-color:var(--cyan);box-shadow:0 0 16px #52f7ff22}
+.lead{background:linear-gradient(180deg,#121a38,var(--card));border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:20px 0}
+section.s{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
+section.s h2{display:flex;align-items:center;gap:10px;font-size:18px;line-height:1.4;margin:0 0 8px;color:var(--text)}
+section.s h2 .n{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-size:13px;color:#03040a;background:linear-gradient(135deg,var(--cyan),var(--violet));font-weight:800}
+section.s p{margin:8px 0;color:#cfd6f5}
+section.s ul{margin:8px 0;padding-inline-start:22px;color:#cfd6f5}
+section.s li{margin:8px 0}
+b{color:#fff}
+footer{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}
+footer .mail{display:inline-block;margin-top:6px;padding:10px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+.lang[hidden]{display:none}
+@media (prefers-reduced-motion:no-preference){.lang:not([hidden]){animation:in .25s ease}@keyframes in{from{opacity:0;transform:translateY(6px)}}}
 </style>
+<noscript><style>.lang[hidden]{display:block!important;border-top:2px solid #1c2547;margin-top:40px}</style></noscript>
 </head>
 <body>
-<h1>حذف حساب Neon Rift</h1>
-
-<p>يمكنك حذف حسابك وبياناتك نهائياً عبر إحدى الطريقتين التاليتين:</p>
-
-<div class="box">
-<h2>الطريقة 1 — من داخل اللعبة</h2>
-<ol>
-<li>افتح لعبة Neon Rift</li>
-<li>اذهب إلى القائمة الرئيسية</li>
-<li>اضغط على أيقونة الحساب (الغيمة)</li>
-<li>اضغط "تسجيل خروج" ثم أنشئ طلب حذف</li>
-</ol>
-<p>أو تواصل معنا عبر البريد (الطريقة 2).</p>
+<div class="wrap">
+<div class="bar"><div class="langs" role="group" aria-label="Language"><button type="button" data-lang="ar" aria-pressed="false" lang="ar">العربية</button><button type="button" data-lang="en" aria-pressed="false" lang="en">English</button><button type="button" data-lang="es" aria-pressed="false" lang="es">Español</button><button type="button" data-lang="fr" aria-pressed="false" lang="fr">Français</button><button type="button" data-lang="pt" aria-pressed="false" lang="pt">Português</button><button type="button" data-lang="ru" aria-pressed="false" lang="ru">Русский</button><button type="button" data-lang="ja" aria-pressed="false" lang="ja">日本語</button><button type="button" data-lang="zh" aria-pressed="false" lang="zh">中文</button></div></div>
+<article class="lang" lang="ar" dir="rtl" data-lang="ar" data-title="حذف البيانات — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>حذف البيانات</h1><p class="upd">آخر تحديث: 16 أكتوبر 2026</p></header>
+<nav class="tabs"><a href="index.html">سياسة الخصوصية</a><a class="on" href="delete-account.html" aria-current="page">حذف البيانات</a></nav>
+<div class="lead">لا تتطلب «Neon Rift» حساباً ولا نخزّن بياناتك الشخصية على خوادمنا. إليك كيف تحذف كل ما يتعلق باللعبة.</div>
+<section class="s"><h2><span class="n">1</span>بيانات اللعبة على جهازك</h2><p>افتح إعدادات أندرويد ← التطبيقات ← Neon Rift ← التخزين ← <b>مسح البيانات</b> (أو احذف التطبيق). يؤدي ذلك إلى حذف تقدّمك وإعداداتك وسجلّ المشتريات المحلي.</p></section>
+<section class="s"><h2><span class="n">2</span>بيانات ألعاب Google Play</h2><p>افتح تطبيق «ألعاب Google Play» ← الإعدادات ← <b>حذف حساب ألعاب Play وبياناته</b>. يحذف ذلك الإنجازات ونتائج لوحات الصدارة المرتبطة بحسابك.</p></section>
+<section class="s"><h2><span class="n">3</span>بيانات الإعلانات</h2><p>من إعدادات أندرويد ← Google ← الإعلانات ← <b>حذف معرّف الإعلانات</b>.</p></section>
+<section class="s"><h2><span class="n">4</span>المشتريات</h2><p>تحتفظ Google Play بسجلّات الشراء وفق القانون، وتجد طلباتك في سجل الطلبات في Google Play. المشتريات الاستهلاكية (شظايا الجواهر) المحفوظة محلياً تُفقد عند مسح البيانات.</p></section>
+<section class="s"><h2><span class="n">5</span>طلب عبر البريد الإلكتروني</h2><p>راسلنا على <b>salhioussama601@gmail.com</b> بعنوان «طلب حذف بيانات Neon Rift». نردّ خلال 30 يوماً.</p></section>
+<footer>للتواصل<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="en" dir="ltr" data-lang="en" data-title="Data Deletion — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Data Deletion</h1><p class="upd">Last updated: October 16, 2026</p></header>
+<nav class="tabs"><a href="index.html">Privacy Policy</a><a class="on" href="delete-account.html" aria-current="page">Data Deletion</a></nav>
+<div class="lead">Neon Rift does not require an account and we do not store your personal data on our servers. Here is how to delete everything related to the game.</div>
+<section class="s"><h2><span class="n">1</span>Game data on your device</h2><p>Open Android Settings → Apps → Neon Rift → Storage → <b>Clear data</b> (or uninstall the game). This deletes your progress, settings and local purchase record.</p></section>
+<section class="s"><h2><span class="n">2</span>Google Play Games data</h2><p>Open the Google Play Games app → Settings → <b>Delete Play Games account &amp; data</b>. This removes the achievements and leaderboard entries linked to your account.</p></section>
+<section class="s"><h2><span class="n">3</span>Advertising data</h2><p>Android Settings → Google → Ads → <b>Delete advertising ID</b>.</p></section>
+<section class="s"><h2><span class="n">4</span>Purchases</h2><p>Google Play keeps purchase records as required by law; you can see your orders in your Google Play order history. Consumable purchases (gem shards) stored locally are lost when data is cleared.</p></section>
+<section class="s"><h2><span class="n">5</span>Request by email</h2><p>Write to <b>salhioussama601@gmail.com</b> with the subject “Neon Rift data deletion request”. We reply within 30 days.</p></section>
+<footer>Contact<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="es" dir="ltr" data-lang="es" data-title="Eliminación de datos — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Eliminación de datos</h1><p class="upd">Última actualización: 16 de octubre de 2026</p></header>
+<nav class="tabs"><a href="index.html">Política de privacidad</a><a class="on" href="delete-account.html" aria-current="page">Eliminación de datos</a></nav>
+<div class="lead">Neon Rift no requiere una cuenta y no almacenamos tus datos personales en nuestros servidores. Así puedes eliminar todo lo relacionado con el juego.</div>
+<section class="s"><h2><span class="n">1</span>Datos del juego en tu dispositivo</h2><p>Abre Ajustes de Android → Aplicaciones → Neon Rift → Almacenamiento → <b>Borrar datos</b> (o desinstala el juego). Se eliminan tu progreso, tus ajustes y el registro local de compras.</p></section>
+<section class="s"><h2><span class="n">2</span>Datos de Google Play Juegos</h2><p>Abre la app Google Play Juegos → Ajustes → <b>Eliminar cuenta y datos de Play Juegos</b>. Esto elimina los logros y las puntuaciones vinculados a tu cuenta.</p></section>
+<section class="s"><h2><span class="n">3</span>Datos de publicidad</h2><p>Ajustes de Android → Google → Anuncios → <b>Eliminar ID de publicidad</b>.</p></section>
+<section class="s"><h2><span class="n">4</span>Compras</h2><p>Google Play conserva los registros de compra según exige la ley; puedes ver tus pedidos en el historial de pedidos de Google Play. Las compras consumibles (fragmentos de gemas) guardadas en local se pierden al borrar los datos.</p></section>
+<section class="s"><h2><span class="n">5</span>Solicitud por correo electrónico</h2><p>Escribe a <b>salhioussama601@gmail.com</b> con el asunto «Solicitud de eliminación de datos de Neon Rift». Respondemos en un plazo de 30 días.</p></section>
+<footer>Contacto<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="fr" dir="ltr" data-lang="fr" data-title="Suppression des données — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Suppression des données</h1><p class="upd">Dernière mise à jour : 16 octobre 2026</p></header>
+<nav class="tabs"><a href="index.html">Politique de confidentialité</a><a class="on" href="delete-account.html" aria-current="page">Suppression des données</a></nav>
+<div class="lead">Neon Rift ne nécessite pas de compte et nous ne stockons pas vos données personnelles sur nos serveurs. Voici comment supprimer tout ce qui est lié au jeu.</div>
+<section class="s"><h2><span class="n">1</span>Données du jeu sur votre appareil</h2><p>Ouvrez Paramètres Android → Applications → Neon Rift → Stockage → <b>Effacer les données</b> (ou désinstallez le jeu). Cela supprime votre progression, vos réglages et l’historique local des achats.</p></section>
+<section class="s"><h2><span class="n">2</span>Données de Jeux Google Play</h2><p>Ouvrez l’application Jeux Google Play → Paramètres → <b>Supprimer le compte et les données Play Jeux</b>. Cela supprime les succès et les scores de classement liés à votre compte.</p></section>
+<section class="s"><h2><span class="n">3</span>Données publicitaires</h2><p>Paramètres Android → Google → Annonces → <b>Supprimer l’identifiant publicitaire</b>.</p></section>
+<section class="s"><h2><span class="n">4</span>Achats</h2><p>Google Play conserve les enregistrements d’achat comme l’exige la loi ; vous pouvez consulter vos commandes dans l’historique des commandes Google Play. Les achats consommables (éclats de gemmes) enregistrés localement sont perdus lorsque les données sont effacées.</p></section>
+<section class="s"><h2><span class="n">5</span>Demande par e-mail</h2><p>Écrivez à <b>salhioussama601@gmail.com</b> avec l’objet « Demande de suppression des données Neon Rift ». Nous répondons sous 30 jours.</p></section>
+<footer>Contact<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="pt" dir="ltr" data-lang="pt" data-title="Exclusão de dados — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Exclusão de dados</h1><p class="upd">Última atualização: 16 de outubro de 2026</p></header>
+<nav class="tabs"><a href="index.html">Política de Privacidade</a><a class="on" href="delete-account.html" aria-current="page">Exclusão de dados</a></nav>
+<div class="lead">O Neon Rift não exige conta e não armazenamos seus dados pessoais em nossos servidores. Veja como excluir tudo o que está relacionado ao jogo.</div>
+<section class="s"><h2><span class="n">1</span>Dados do jogo no seu dispositivo</h2><p>Abra Configurações do Android → Apps → Neon Rift → Armazenamento → <b>Limpar dados</b> (ou desinstale o jogo). Isso apaga seu progresso, configurações e o registro local de compras.</p></section>
+<section class="s"><h2><span class="n">2</span>Dados do Google Play Jogos</h2><p>Abra o app Google Play Jogos → Configurações → <b>Excluir conta e dados do Play Jogos</b>. Isso remove as conquistas e pontuações dos placares ligadas à sua conta.</p></section>
+<section class="s"><h2><span class="n">3</span>Dados de publicidade</h2><p>Configurações do Android → Google → Anúncios → <b>Excluir ID de publicidade</b>.</p></section>
+<section class="s"><h2><span class="n">4</span>Compras</h2><p>O Google Play mantém registros de compra conforme exige a lei; você pode ver seus pedidos no histórico de pedidos do Google Play. Compras consumíveis (fragmentos de gemas) guardadas localmente são perdidas ao limpar os dados.</p></section>
+<section class="s"><h2><span class="n">5</span>Solicitação por e-mail</h2><p>Escreva para <b>salhioussama601@gmail.com</b> com o assunto “Solicitação de exclusão de dados do Neon Rift”. Respondemos em até 30 dias.</p></section>
+<footer>Contato<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="ru" dir="ltr" data-lang="ru" data-title="Удаление данных — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>Удаление данных</h1><p class="upd">Последнее обновление: 16 октября 2026 г.</p></header>
+<nav class="tabs"><a href="index.html">Политика конфиденциальности</a><a class="on" href="delete-account.html" aria-current="page">Удаление данных</a></nav>
+<div class="lead">Neon Rift не требует учётной записи, и мы не храним ваши персональные данные на своих серверах. Вот как удалить всё, что связано с игрой.</div>
+<section class="s"><h2><span class="n">1</span>Данные игры на устройстве</h2><p>Откройте Настройки Android → Приложения → Neon Rift → Хранилище → <b>Очистить данные</b> (или удалите игру). Это удалит прогресс, настройки и локальную запись о покупках.</p></section>
+<section class="s"><h2><span class="n">2</span>Данные Google Play Игр</h2><p>Откройте приложение Google Play Игры → Настройки → <b>Удалить аккаунт и данные Play Игр</b>. Это удалит достижения и результаты в таблицах лидеров, связанные с вашим аккаунтом.</p></section>
+<section class="s"><h2><span class="n">3</span>Рекламные данные</h2><p>Настройки Android → Google → Реклама → <b>Удалить рекламный идентификатор</b>.</p></section>
+<section class="s"><h2><span class="n">4</span>Покупки</h2><p>Google Play хранит записи о покупках в соответствии с законом; заказы можно посмотреть в истории заказов Google Play. Расходуемые покупки (осколки самоцветов), сохранённые локально, теряются при очистке данных.</p></section>
+<section class="s"><h2><span class="n">5</span>Запрос по электронной почте</h2><p>Напишите на <b>salhioussama601@gmail.com</b> с темой «Запрос на удаление данных Neon Rift». Мы отвечаем в течение 30 дней.</p></section>
+<footer>Связь<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="ja" dir="ltr" data-lang="ja" data-title="データの削除 — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>データの削除</h1><p class="upd">最終更新日：2026年10月16日</p></header>
+<nav class="tabs"><a href="index.html">プライバシーポリシー</a><a class="on" href="delete-account.html" aria-current="page">データの削除</a></nav>
+<div class="lead">Neon Riftはアカウントを必要とせず、個人データを当方のサーバーに保存しません。ゲームに関するすべてを削除する方法は次のとおりです。</div>
+<section class="s"><h2><span class="n">1</span>端末内のゲームデータ</h2><p>Androidの設定 → アプリ → Neon Rift → ストレージ → <b>データを消去</b>（またはゲームをアンインストール）。進行状況、設定、ローカルの購入記録が削除されます。</p></section>
+<section class="s"><h2><span class="n">2</span>Google Play ゲームのデータ</h2><p>Google Play ゲームアプリ → 設定 → <b>Play ゲームのアカウントとデータを削除</b>。アカウントに紐づく実績とリーダーボードの記録が削除されます。</p></section>
+<section class="s"><h2><span class="n">3</span>広告データ</h2><p>Androidの設定 → Google → 広告 → <b>広告IDを削除</b>。</p></section>
+<section class="s"><h2><span class="n">4</span>購入</h2><p>Google Playは法令に従って購入記録を保持します。注文はGoogle Playの注文履歴で確認できます。端末内に保存された消耗型購入（ジェムシャード）は、データを消去すると失われます。</p></section>
+<section class="s"><h2><span class="n">5</span>メールでのご依頼</h2><p><b>salhioussama601@gmail.com</b> 宛に、件名「Neon Rift データ削除依頼」でご連絡ください。30日以内に返信します。</p></section>
+<footer>お問い合わせ<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
+<article class="lang" lang="zh" dir="ltr" data-lang="zh" data-title="数据删除 — Neon Rift" hidden>
+<header><div class="logo"><i></i>NEON RIFT</div><h1>数据删除</h1><p class="upd">最后更新：2026年10月16日</p></header>
+<nav class="tabs"><a href="index.html">隐私政策</a><a class="on" href="delete-account.html" aria-current="page">数据删除</a></nav>
+<div class="lead">Neon Rift 不需要账号，我们也不在服务器上存储您的个人数据。以下是删除与游戏相关的所有内容的方法。</div>
+<section class="s"><h2><span class="n">1</span>设备上的游戏数据</h2><p>打开 Android 设置 → 应用 → Neon Rift → 存储 → <b>清除数据</b>（或卸载游戏）。这会删除您的进度、设置和本地购买记录。</p></section>
+<section class="s"><h2><span class="n">2</span>Google Play 游戏数据</h2><p>打开 Google Play 游戏应用 → 设置 → <b>删除 Play 游戏账号和数据</b>。这会删除与您账号关联的成就和排行榜记录。</p></section>
+<section class="s"><h2><span class="n">3</span>广告数据</h2><p>Android 设置 → Google → 广告 → <b>删除广告 ID</b>。</p></section>
+<section class="s"><h2><span class="n">4</span>购买</h2><p>Google Play 按法律要求保留购买记录；您可以在 Google Play 订单记录中查看订单。保存在本地的消耗型购买（宝石碎片）在清除数据时会丢失。</p></section>
+<section class="s"><h2><span class="n">5</span>通过电子邮件申请</h2><p>请发送邮件至 <b>salhioussama601@gmail.com</b>，主题为“Neon Rift 数据删除请求”。我们会在 30 天内回复。</p></section>
+<footer>联系我们<br><a class="mail" href="mailto:salhioussama601@gmail.com">salhioussama601@gmail.com</a><p>© 2026 Oussama Salhi · Neon Rift</p></footer>
+</article>
 </div>
-
-<div class="box">
-<h2>الطريقة 2 — عبر البريد الإلكتروني</h2>
-<p>أرسل رسالة إلى:</p>
-<p><b>salhioussama601@gmail.com</b></p>
-<p>بعنوان: <b>"طلب حذف حساب Neon Rift"</b></p>
-<p>مع ذكر البريد الإلكتروني المُسجّل في اللعبة.</p>
-</div>
-
-<h2>ما سيتم حذفه</h2>
-<ul>
-<li>البريد الإلكتروني</li>
-<li>اسم المستخدم</li>
-<li>الأفاتار (الرمز التعبيري)</li>
-<li>تقدّم اللعبة (المستوى، الشظايا، الإنجازات)</li>
-<li>القطع الأثرية والرفقاء</li>
-<li>جميع البيانات السحابية</li>
-</ul>
-
-<h2>مدة الحذف</h2>
-<p>خلال <b>30 يوماً</b> من استلام الطلب، مع إشعار تأكيدي عند الانتهاء.</p>
-
-<h2>ملاحظة مهمة</h2>
-<p>لن يمكن استرجاع البيانات بعد الحذف. سجل المشتريات تحتفظ به Google وفق سياساتها.</p>
-
-<hr>
-<p style="text-align:center;color:#666;font-size:13px">
-Neon Rift — Oussama Salhi<br>
-salhioussama601@gmail.com
-</p>
-
+<script>
+(function(){
+  var codes=["ar", "en", "es", "fr", "pt", "ru", "ja", "zh"];
+  function pick(){
+    var q=new URLSearchParams(location.search).get('lang');
+    if(q&&codes.indexOf(q)>-1)return q;
+    try{var s=localStorage.getItem('nr_lang');if(s&&codes.indexOf(s)>-1)return s;}catch(e){}
+    var n=(navigator.languages||[navigator.language||'en']);
+    for(var i=0;i<n.length;i++){var c=String(n[i]).toLowerCase().slice(0,2);if(codes.indexOf(c)>-1)return c;}
+    return 'en';
+  }
+  function show(c,save){
+    document.querySelectorAll('.lang').forEach(function(a){a.hidden=a.dataset.lang!==c;});
+    var a=document.querySelector('.lang[data-lang="'+c+'"]');
+    document.documentElement.lang=c;document.documentElement.dir=a.getAttribute('dir');
+    document.title=a.dataset.title;
+    document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.lang===c);});
+    if(save){try{localStorage.setItem('nr_lang',c);}catch(e){}}
+    document.querySelectorAll('.tabs a, .lang a[href$=".html"]').forEach(function(l){
+      var u=l.getAttribute('href').split('?')[0];l.setAttribute('href',u+'?lang='+c);});
+  }
+  document.querySelectorAll('.langs button').forEach(function(b){
+    b.addEventListener('click',function(){show(b.dataset.lang,true);window.scrollTo({top:0});});});
+  show(pick(),false);
+})();
+</script>
 </body>
 </html>
